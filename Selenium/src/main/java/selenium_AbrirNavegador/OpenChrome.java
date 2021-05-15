@@ -1,4 +1,4 @@
-package test;
+package selenium_AbrirNavegador;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestSelenium {
+public class OpenChrome {
 
 	public static void main(String[] args) {
 		// Setear la ruta 
