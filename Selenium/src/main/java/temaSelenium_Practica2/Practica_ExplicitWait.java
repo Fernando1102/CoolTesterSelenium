@@ -1,15 +1,17 @@
-package selenium_Practica1;
+package temaSelenium_Practica2;
 
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
-public class Practica_IniciarSesion {
-	
+public class Practica_ExplicitWait {
 	public static void main(String[] args) throws InterruptedException {
 		// Setear la ruta 
 		String exePath  = Paths.get("").toAbsolutePath().toString() + File.separator + "driver" + File.separator;
@@ -30,11 +32,21 @@ public class Practica_IniciarSesion {
 		password.sendKeys("admin123");
 		btnLogin.click();
 		
-		Thread.sleep(3000);
 		
-	
+		//Realizamos la acción de pasar el mouse sobre el navegador
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		
+		
+		
+		
+		//Cerrando el navegador
+		//driver.close(); //cierra la ventana que el web driver está utilizando
+		//driver.quit(); //cierra todas las ventanas del webdriver
+		
+
 	}
 	
-		
-	
+
 }
